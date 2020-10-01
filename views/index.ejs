@@ -1,0 +1,22 @@
+<%- include("components/header") -%>
+
+
+<div class="container">
+  <div class="box" id="heading">
+    <h1>Welcome</h1>
+  </div>
+  <div class="box">
+    <form class="index" action="/login" method="post">
+      <input type="text" name="username" placeholder="Enter your username" autocomplete="off" autofocus required><br>
+      <button type="submit" class="to-do" name="button">Login</button>
+    </form>
+      <form class="index" action="/signup" method="post">
+        <h2 class="sep">Don't have an account ?</h2>
+        <div>
+          <button type="submit" class="Signup" name="button">Signup</button>
+        </div>
+      </form>
+    </div>
+</div>
+
+<%- include("components/footer") -%>

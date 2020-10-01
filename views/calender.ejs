@@ -1,0 +1,19 @@
+<%- include("components/header") -%>
+
+<div class="box" id="heading">
+  <h1>Hey ! <%=name_add%></h1>
+</div>
+
+<div class="box">
+  <label><h4>Select Date</h4></label>
+  <form class="index" action="/cal_data" method="post">
+    <input type="date" name="date" value="value"><br>
+    <button type="submit" class="to-do" name="button">Create a To-do list</button>
+
+  </form>
+
+</div>
+
+
+
+<%- include("components/footer") -%>

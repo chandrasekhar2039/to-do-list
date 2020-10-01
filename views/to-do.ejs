@@ -1,0 +1,29 @@
+<%- include("components/header") -%>
+
+
+
+<div class="box" id="heading">
+    <h1><%= use %></h1>
+  <h1 class="dtd">Dt:- <%= day %> </h1>
+</div>
+
+<div class="box">
+
+  <% value.forEach(function(single){ %>
+    <form  action="/del" method="post">
+    <div class="item">
+  <button type="submit" class="del" value="<%= single.id %>" name="checkbox" >-</button>
+        <p class="tu"> <%=single.item %> </p>
+      </div>
+      </form>
+  <%})%>
+
+  <form class="item" action="/store" method="post">
+    <input type="text" name="items" value="" placeholder="Enter your iteam to add" autocomplete="off" required autofocus>
+    <button type="submit" name="button" class="submit">+</button>
+  </form>
+</div>
+
+
+
+<%- include("components/footer") -%>
